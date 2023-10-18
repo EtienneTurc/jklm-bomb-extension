@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Bomb Extensions",
+  "description": "Bomb cheater",
+  "version": "1.0",
+  "action": {
+    "default_popup": "bomb.html",
+    "default_icon": "bomb.png"
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": [
+        "bomb.js"
+      ],
+      "matches": [
+        "https://jklm.fun/*",
+        "https://falcon.jklm.fun/games/*"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
